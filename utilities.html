@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Utilities & Rent</title>
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="utilities-theme">
+
+<div class="layout">
+
+<aside class="sidebar" id="sidebar"></aside>
+
+<main class="main">
+
+<div class="page-title">
+
+<h1>⚡ Utilities & Rent</h1>
+
+<p>Manage electricity, water and rent bills</p>
+
+</div>
+
+<div class="form-box">
+
+<form id="utilityForm">
+
+<div class="form-grid">
+
+<div>
+
+<label>Expense Type</label>
+
+<select id="type">
+
+<option>Electricity</option>
+<option>Water</option>
+<option>Rent</option>
+<option>Property Tax</option>
+<option>Other Utility</option>
+
+</select>
+
+</div>
+
+<div>
+<label>Billing Month</label>
+<input type="month" id="month" required>
+</div>
+
+<div>
+<label>Amount</label>
+<input type="number" id="amount" required>
+</div>
+
+<div>
+<label>Due Date</label>
+<input type="date" id="dueDate">
+</div>
+
+<div>
+
+<label>Status</label>
+
+<select id="status">
+<option>Paid</option>
+<option>Pending</option>
+</select>
+
+</div>
+
+</div>
+
+<br>
+
+<button class="btn">
+Add Expense
+</button>
+
+</form>
+
+</div>
+
+<div class="table-box">
+
+<table>
+
+<thead>
+
+<tr>
+<th>Type</th>
+<th>Month</th>
+<th>Amount</th>
+<th>Due Date</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+
+</thead>
+
+<tbody id="utilityTable"></tbody>
+
+</table>
+
+<div class="summary">
+
+<h2>
+Total Utilities:
+<span id="utilityTotal">₹0</span>
+</h2>
+
+</div>
+
+</div>
+
+</main>
+</div>
+
+<script src="common.js"></script>
+<script src="utilities.js"></script>
+
+</body>
+</html>

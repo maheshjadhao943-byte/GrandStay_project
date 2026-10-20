@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Food & Raw Material</title>
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="food-theme">
+
+<div class="layout">
+
+<aside class="sidebar" id="sidebar"></aside>
+
+<main class="main">
+
+<div class="page-title">
+<h1>🍽 Food & Raw Material</h1>
+<p>Food inventory and purchase management</p>
+</div>
+
+<div class="form-box">
+
+<h2>Add Purchase</h2>
+
+<br>
+
+<form id="foodForm">
+
+<div class="form-grid">
+
+<div>
+<label>Item Name</label>
+<input id="item" required>
+</div>
+
+<div>
+
+<label>Category</label>
+
+<select id="category">
+
+<option>Vegetables</option>
+<option>Fruits</option>
+<option>Grains</option>
+<option>Dairy</option>
+<option>Meat</option>
+<option>Beverages</option>
+<option>Other</option>
+
+</select>
+
+</div>
+
+<div>
+<label>Quantity</label>
+<input type="number" id="quantity" required>
+</div>
+
+<div>
+
+<label>Unit</label>
+
+<select id="unit">
+<option>Kg</option>
+<option>Liter</option>
+<option>Pieces</option>
+<option>Packet</option>
+</select>
+
+</div>
+
+<div>
+<label>Price Per Unit</label>
+<input type="number" id="price" required>
+</div>
+
+<div>
+<label>Supplier</label>
+<input id="supplier">
+</div>
+
+<div>
+<label>Purchase Date</label>
+<input type="date" id="date" required>
+</div>
+
+</div>
+
+<br>
+
+<button class="btn">Add Purchase</button>
+
+</form>
+
+</div>
+
+<div class="table-box">
+
+<h2>Purchase Records</h2>
+
+<br>
+
+<table>
+
+<thead>
+<tr>
+<th>Item</th>
+<th>Category</th>
+<th>Qty</th>
+<th>Supplier</th>
+<th>Date</th>
+<th>Total</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody id="foodTable"></tbody>
+
+</table>
+
+<div class="summary">
+<h2>Total Food Expense: <span id="foodTotal">₹0</span></h2>
+</div>
+
+</div>
+
+</main>
+</div>
+
+<script src="common.js"></script>
+<script src="food.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Laundry & Repairs</title>
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="laundry-theme">
+
+<div class="layout">
+
+<aside class="sidebar" id="sidebar"></aside>
+
+<main class="main">
+
+<div class="page-title">
+
+<h1>🔧 Laundry, Maintenance & Repairs</h1>
+
+<p>Hotel maintenance expense management</p>
+
+</div>
+
+<div class="form-box">
+
+<form id="expenseForm">
+
+<div class="form-grid">
+
+<div>
+
+<label>Expense Type</label>
+
+<select id="type">
+
+<option>Laundry</option>
+<option>Room Repair</option>
+<option>Electrical Repair</option>
+<option>Plumbing</option>
+<option>AC Maintenance</option>
+<option>Furniture</option>
+<option>Equipment Repair</option>
+<option>Other</option>
+
+</select>
+
+</div>
+
+<div>
+
+<label>Description</label>
+
+<input id="description" required>
+
+</div>
+
+<div>
+
+<label>Amount</label>
+
+<input type="number"
+id="amount"
+required>
+
+</div>
+
+<div>
+
+<label>Date</label>
+
+<input type="date"
+id="date"
+required>
+
+</div>
+
+</div>
+
+<br>
+
+<button class="btn">
+Add Expense
+</button>
+
+</form>
+
+</div>
+
+<div class="table-box">
+
+<table>
+
+<thead>
+
+<tr>
+<th>Type</th>
+<th>Description</th>
+<th>Amount</th>
+<th>Date</th>
+<th>Action</th>
+</tr>
+
+</thead>
+
+<tbody id="expenseTable"></tbody>
+
+</table>
+
+<div class="summary">
+
+<h2>
+Total:
+<span id="total">₹0</span>
+</h2>
+
+</div>
+
+</div>
+
+</main>
+
+</div>
+
+<script src="common.js"></script>
+
+<script>
+
+const PAGE_NAME = "laundry";
+const STORAGE_KEY = "laundryExpenses";
+
+</script>
+
+<script src="expense.js"></script>
+
+</body>
+</html>

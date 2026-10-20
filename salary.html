@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Salary & Payroll</title>
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="salary-theme">
+
+<div class="layout">
+
+<aside class="sidebar" id="sidebar"></aside>
+
+<main class="main">
+
+<div class="page-title">
+
+<h1>💰 Salary & Payroll</h1>
+
+<p>Manage employee salary payments</p>
+
+</div>
+
+<div class="form-box">
+
+<form id="salaryForm">
+
+<div class="form-grid">
+
+<div>
+<label>Employee Name</label>
+<input id="employee" required>
+</div>
+
+<div>
+
+<label>Department</label>
+
+<select id="department">
+
+<option>Waiter</option>
+<option>Reception</option>
+<option>Security</option>
+<option>Cleaning</option>
+<option>Kitchen</option>
+<option>Management</option>
+
+</select>
+
+</div>
+
+<div>
+<label>Basic Salary</label>
+<input type="number" id="basic" required>
+</div>
+
+<div>
+<label>Overtime / Bonus</label>
+<input type="number" id="bonus" value="0">
+</div>
+
+<div>
+<label>Deduction</label>
+<input type="number" id="deduction" value="0">
+</div>
+
+<div>
+<label>Salary Month</label>
+<input type="month" id="month" required>
+</div>
+
+</div>
+
+<br>
+
+<button class="btn">
+Save Salary
+</button>
+
+</form>
+
+</div>
+
+<div class="table-box">
+
+<table>
+
+<thead>
+
+<tr>
+<th>Employee</th>
+<th>Department</th>
+<th>Month</th>
+<th>Basic</th>
+<th>Bonus</th>
+<th>Deduction</th>
+<th>Net Salary</th>
+<th>Action</th>
+</tr>
+
+</thead>
+
+<tbody id="salaryTable"></tbody>
+
+</table>
+
+<div class="summary">
+
+<h2>
+Total Salary Expense:
+<span id="salaryTotal">₹0</span>
+</h2>
+
+</div>
+
+</div>
+
+</main>
+</div>
+
+<script src="common.js"></script>
+<script src="salary.js"></script>
+
+</body>
+</html>

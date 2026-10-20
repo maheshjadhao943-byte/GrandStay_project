@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Duty & Shift Roster</title>
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="roster-theme">
+
+<div class="layout">
+
+<aside class="sidebar" id="sidebar"></aside>
+
+<main class="main">
+
+<div class="page-title">
+
+<h1>📅 Duty & Shift Roster</h1>
+
+<p>Manage hotel employee shifts</p>
+
+</div>
+
+<div class="form-box">
+
+<form id="rosterForm">
+
+<div class="form-grid">
+
+<div>
+
+<label>Employee Name</label>
+
+<input id="employee" required>
+
+</div>
+
+<div>
+
+<label>Department</label>
+
+<select id="department">
+
+<option>Waiter</option>
+<option>Reception</option>
+<option>Security</option>
+<option>Cleaning</option>
+<option>Kitchen</option>
+<option>Management</option>
+
+</select>
+
+</div>
+
+<div>
+
+<label>Shift</label>
+
+<select id="shift">
+
+<option>Morning</option>
+<option>Evening</option>
+<option>Night</option>
+
+</select>
+
+</div>
+
+<div>
+
+<label>Duty Date</label>
+
+<input
+type="date"
+id="date"
+required>
+
+</div>
+
+<div>
+
+<label>Status</label>
+
+<select id="status">
+
+<option>Scheduled</option>
+<option>Present</option>
+<option>Absent</option>
+<option>Leave</option>
+
+</select>
+
+</div>
+
+</div>
+
+<br>
+
+<button class="btn">
+Assign Duty
+</button>
+
+</form>
+
+</div>
+
+<div class="table-box">
+
+<table>
+
+<thead>
+
+<tr>
+<th>Employee</th>
+<th>Department</th>
+<th>Shift</th>
+<th>Date</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+
+</thead>
+
+<tbody id="rosterTable"></tbody>
+
+</table>
+
+</div>
+
+</main>
+</div>
+
+<script src="common.js"></script>
+<script src="roster.js"></script>
+
+</body>
+</html>

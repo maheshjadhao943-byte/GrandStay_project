@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Hotel Revenue</title>
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="layout">
+
+<aside class="sidebar" id="sidebar"></aside>
+
+<main class="main">
+
+<div class="page-title">
+
+<h1>💳 Hotel Revenue</h1>
+
+<p>Record all hotel income</p>
+
+</div>
+
+<div class="form-box">
+
+<form id="revenueForm">
+
+<div class="form-grid">
+
+<div>
+
+<label>Revenue Type</label>
+
+<select id="type">
+
+<option>Room Revenue</option>
+<option>Restaurant Revenue</option>
+<option>Event / Banquet</option>
+<option>Laundry Revenue</option>
+<option>Other Revenue</option>
+
+</select>
+
+</div>
+
+<div>
+
+<label>Description</label>
+
+<input id="description">
+
+</div>
+
+<div>
+
+<label>Amount</label>
+
+<input
+type="number"
+id="amount"
+required>
+
+</div>
+
+<div>
+
+<label>Date</label>
+
+<input
+type="date"
+id="date"
+required>
+
+</div>
+
+</div>
+
+<br>
+
+<button class="btn">
+Add Revenue
+</button>
+
+</form>
+
+</div>
+
+<div class="table-box">
+
+<table>
+
+<thead>
+
+<tr>
+<th>Revenue Type</th>
+<th>Description</th>
+<th>Amount</th>
+<th>Date</th>
+<th>Action</th>
+</tr>
+
+</thead>
+
+<tbody id="revenueTable"></tbody>
+
+</table>
+
+<div class="summary">
+
+<h2>
+Total Revenue:
+<span id="revenueTotal">₹0</span>
+</h2>
+
+</div>
+
+</div>
+
+</main>
+</div>
+
+<script src="common.js"></script>
+<script src="revenue.js"></script>
+
+</body>
+</html>

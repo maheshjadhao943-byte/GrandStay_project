@@ -1,0 +1,1002 @@
+/* =========================================================
+   GRANDSTAY HOTEL MANAGEMENT SYSTEM
+   Modern Glassmorphism Dashboard
+   ========================================================= */
+
+/* ---------- GOOGLE-LIKE FONT FALLBACK ---------- */
+
+:root {
+    --primary: #6366f1;
+    --primary-dark: #4338ca;
+    --secondary: #8b5cf6;
+
+    --green: #10b981;
+    --red: #ef4444;
+    --orange: #f59e0b;
+    --blue: #3b82f6;
+    --cyan: #06b6d4;
+    --pink: #ec4899;
+
+    --dark: #0f172a;
+    --dark-2: #111827;
+
+    --text: #172033;
+    --text-light: #64748b;
+
+    --glass: rgba(255, 255, 255, 0.78);
+    --glass-border: rgba(255, 255, 255, 0.60);
+
+    --shadow: 0 10px 35px rgba(15, 23, 42, 0.10);
+}
+
+/* ---------- RESET ---------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        "Segoe UI",
+        "Trebuchet MS",
+        Arial,
+        sans-serif;
+
+    color: #172033;
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            rgba(238, 242, 255, 0.88),
+            rgba(240, 253, 250, 0.88)
+        ),
+        url("background55");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* =========================================================
+   MAIN LAYOUT
+   ========================================================= */
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.sidebar {
+    width: 280px;
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            180deg,
+            #0f172a 0%,
+            #111c35 50%,
+            #172554 100%
+        );
+
+    color: white;
+
+    padding: 25px 18px;
+
+    position: sticky;
+    top: 0;
+    height: 100vh;
+
+    overflow-y: auto;
+
+    box-shadow:
+        8px 0 30px rgba(15, 23, 42, 0.15);
+
+    z-index: 100;
+}
+
+/* ---------- Logo ---------- */
+
+.logo {
+    padding: 18px 15px 28px;
+    margin-bottom: 15px;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.10);
+}
+
+.logo h2 {
+    font-size: 27px;
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #c7d2fe
+        );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.logo p {
+    margin-top: 6px;
+
+    color: #94a3b8;
+
+    font-size: 14px;
+
+    letter-spacing: 0.5px;
+}
+
+/* =========================================================
+   SIDEBAR MENU
+   ========================================================= */
+
+.menu {
+    margin-top: 10px;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    text-decoration: none;
+
+    color: #aebbd0;
+
+    padding: 14px 15px;
+
+    margin-bottom: 8px;
+
+    border-radius: 12px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+
+    border:
+        1px solid transparent;
+}
+
+/* Menu Hover */
+
+.menu a:hover {
+    color: white;
+
+    background:
+        rgba(255, 255, 255, 0.09);
+
+    border-color:
+        rgba(255, 255, 255, 0.10);
+
+    transform: translateX(5px);
+}
+
+/* Active Menu */
+
+.menu a.active {
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6366f1,
+            #7c3aed
+        );
+
+    box-shadow:
+        0 8px 22px
+        rgba(99, 102, 241, 0.35);
+
+    transform: translateX(3px);
+}
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.main {
+    flex: 1;
+
+    padding: 35px;
+
+    width: calc(100% - 280px);
+
+    overflow-x: hidden;
+}
+
+/* =========================================================
+   PAGE TITLE
+   ========================================================= */
+
+.page-title {
+    position: relative;
+
+    margin-bottom: 30px;
+
+    padding: 23px 25px;
+
+    border-radius: 18px;
+
+    background:
+        rgba(255, 255, 255, 0.60);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.75);
+
+    box-shadow:
+        0 8px 25px
+        rgba(15, 23, 42, 0.06);
+
+    overflow: hidden;
+}
+
+/* Decorative line */
+
+.page-title::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 6px;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            #6366f1,
+            #8b5cf6,
+            #06b6d4
+        );
+}
+
+.page-title h1 {
+    font-size: clamp(26px, 3vw, 38px);
+
+    font-weight: 800;
+
+    letter-spacing: -0.8px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #1e293b,
+            #4338ca,
+            #7c3aed
+        );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.page-title p {
+    color: var(--text-light);
+
+    margin-top: 7px;
+
+    font-size: 15px;
+
+    font-weight: 500;
+}
+
+/* =========================================================
+   DASHBOARD CARDS
+   ========================================================= */
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(220px, 1fr));
+
+    gap: 22px;
+
+    margin-bottom: 30px;
+}
+
+.card {
+    position: relative;
+
+    padding: 28px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 255, 255, 0.65);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.80);
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    overflow: hidden;
+}
+
+.card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 90px;
+    height: 90px;
+
+    right: -30px;
+    top: -30px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(99, 102, 241, 0.10);
+}
+
+.card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 18px 40px
+        rgba(15, 23, 42, 0.14);
+}
+
+.card h3 {
+    color: #8290a5;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 14px;
+}
+
+.card .amount {
+    font-size: 32px;
+
+    font-weight: 800;
+
+    letter-spacing: -1px;
+}
+
+.green {
+    color: #059669;
+}
+
+.red {
+    color: #e11d48;
+}
+
+.purple {
+    color: #5b4ce1;
+}
+
+/* =========================================================
+   MODULE CARDS
+   ========================================================= */
+
+.modules {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(240px, 1fr));
+
+    gap: 22px;
+
+    margin-top: 30px;
+}
+
+.module {
+    position: relative;
+
+    min-height: 190px;
+
+    padding: 26px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 255, 255, 0.62);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.85);
+
+    box-shadow:
+        0 10px 30px
+        rgba(15, 23, 42, 0.07);
+
+    transition: all 0.3s ease;
+
+    overflow: hidden;
+}
+
+.module::before {
+    content: "";
+
+    position: absolute;
+
+    width: 80px;
+    height: 80px;
+
+    right: -20px;
+    bottom: -20px;
+
+    background:
+        rgba(99, 102, 241, 0.08);
+
+    border-radius: 50%;
+}
+
+.module:hover {
+    transform: translateY(-7px);
+
+    border-color:
+        rgba(99, 102, 241, 0.30);
+
+    box-shadow:
+        0 18px 40px
+        rgba(99, 102, 241, 0.14);
+}
+
+.module h2 {
+    margin-bottom: 10px;
+
+    font-size: 20px;
+
+    color: #1e293b;
+}
+
+.module p {
+    color: #718096;
+
+    line-height: 1.6;
+
+    margin-bottom: 22px;
+
+    font-size: 14px;
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    padding: 11px 18px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6366f1,
+            #7c3aed
+        );
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 7px 18px
+        rgba(99, 102, 241, 0.22);
+
+    transition: all 0.25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 24px
+        rgba(99, 102, 241, 0.35);
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+.btn-danger {
+    background:
+        linear-gradient(
+            135deg,
+            #f43f5e,
+            #dc2626
+        );
+
+    box-shadow:
+        0 6px 15px
+        rgba(225, 29, 72, 0.20);
+}
+
+.btn-danger:hover {
+    box-shadow:
+        0 10px 22px
+        rgba(225, 29, 72, 0.30);
+}
+
+/* =========================================================
+   FORM CONTAINER
+   ========================================================= */
+
+.form-box {
+    position: relative;
+
+    background:
+        rgba(255, 255, 255, 0.68);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.85);
+
+    padding: 28px;
+
+    border-radius: 20px;
+
+    margin-bottom: 28px;
+
+    box-shadow: var(--shadow);
+}
+
+.form-box h2 {
+    font-size: 21px;
+
+    margin-bottom: 5px;
+
+    color: #1e293b;
+}
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(180px, 1fr));
+
+    gap: 20px;
+}
+
+/* =========================================================
+   LABELS
+   ========================================================= */
+
+label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 13px;
+
+    color: #475569;
+
+    font-weight: 700;
+
+    letter-spacing: 0.2px;
+}
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    background:
+        rgba(248, 250, 252, 0.85);
+
+    border:
+        1px solid #dce3ed;
+
+    border-radius: 10px;
+
+    color: #1e293b;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: all 0.25s ease;
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+    border-color: #a5b4fc;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    background: white;
+
+    border-color: #6366f1;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(99, 102, 241, 0.10);
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* =========================================================
+   TABLE CONTAINER
+   ========================================================= */
+
+.table-box {
+    background:
+        rgba(255, 255, 255, 0.70);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.85);
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    overflow-x: auto;
+
+    box-shadow: var(--shadow);
+}
+
+.table-box h2 {
+    font-size: 21px;
+
+    margin-bottom: 10px;
+
+    color: #1e293b;
+}
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+table {
+    width: 100%;
+
+    border-collapse: separate;
+
+    border-spacing: 0;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+}
+
+thead {
+    background:
+        linear-gradient(
+            135deg,
+            #eef2ff,
+            #f5f3ff
+        );
+}
+
+th {
+    padding: 15px;
+
+    color: #4338ca;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.4px;
+
+    text-align: left;
+
+    border-bottom:
+        2px solid #e0e7ff;
+}
+
+td {
+    padding: 15px;
+
+    color: #475569;
+
+    font-size: 14px;
+
+    border-bottom:
+        1px solid #edf2f7;
+
+    background:
+        rgba(255, 255, 255, 0.40);
+}
+
+tbody tr {
+    transition: all 0.2s ease;
+}
+
+tbody tr:hover td {
+    background:
+        rgba(238, 242, 255, 0.75);
+}
+
+/* =========================================================
+   SUMMARY
+   ========================================================= */
+
+.summary {
+    position: relative;
+
+    margin-top: 22px;
+
+    padding: 22px;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(238, 242, 255, 0.95),
+            rgba(245, 243, 255, 0.95)
+        );
+
+    border:
+        1px solid #ddd6fe;
+}
+
+.summary h2 {
+    color: #4338ca;
+
+    font-size: 19px;
+}
+
+/* =========================================================
+   DIFFERENT MODULE ACCENTS
+   Optional classes for individual pages
+   ========================================================= */
+
+.food-theme .page-title::before {
+    background:
+        linear-gradient(#10b981, #22c55e);
+}
+
+.utilities-theme .page-title::before {
+    background:
+        linear-gradient(#f59e0b, #f97316);
+}
+
+.laundry-theme .page-title::before {
+    background:
+        linear-gradient(#8b5cf6, #6366f1);
+}
+
+.fuel-theme .page-title::before {
+    background:
+        linear-gradient(#f97316, #ef4444);
+}
+
+.misc-theme .page-title::before {
+    background:
+        linear-gradient(#06b6d4, #3b82f6);
+}
+
+.roster-theme .page-title::before {
+    background:
+        linear-gradient(#ec4899, #8b5cf6);
+}
+
+.salary-theme .page-title::before {
+    background:
+        linear-gradient(#10b981, #059669);
+}
+
+.profit-theme .page-title::before {
+    background:
+        linear-gradient(#6366f1, #ec4899);
+}
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #eef2f7;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #a5b4fc;
+
+    border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background:
+        rgba(255, 255, 255, 0.18);
+}
+
+/* =========================================================
+   RESPONSIVE TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .cards,
+    .modules {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .form-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+/* =========================================================
+   RESPONSIVE MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .layout {
+        display: block;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        min-height: auto;
+
+        position: relative;
+
+        padding: 15px;
+    }
+
+    .logo {
+        padding: 10px 8px 18px;
+    }
+
+    .menu {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 7px;
+    }
+
+    .menu a {
+        margin: 0;
+
+        padding: 11px;
+
+        font-size: 13px;
+    }
+
+    .menu a:hover,
+    .menu a.active {
+        transform: none;
+    }
+
+    .main {
+        width: 100%;
+
+        padding: 20px;
+    }
+
+    .cards,
+    .modules,
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-title {
+        padding: 20px;
+    }
+
+    .page-title h1 {
+        font-size: 27px;
+    }
+
+    .card,
+    .module,
+    .form-box,
+    .table-box {
+        border-radius: 16px;
+    }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .main {
+        padding: 13px;
+    }
+
+    .menu {
+        grid-template-columns: 1fr;
+    }
+
+    .page-title h1 {
+        font-size: 24px;
+    }
+
+    .card .amount {
+        font-size: 27px;
+    }
+
+    .form-box,
+    .table-box,
+    .card,
+    .module {
+        padding: 18px;
+    }
+
+    th,
+    td {
+        padding: 11px;
+        font-size: 12px;
+    }
+}
